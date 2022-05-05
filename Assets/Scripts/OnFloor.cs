@@ -26,7 +26,7 @@ public class OnFloor : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
-        if (col.tag == "Player" )
+        if (col.tag == "Player" && collider.bounds.Contains(col.bounds.min))
         {
             Debug.Log("col");
             floor.GetComponent<BoxCollider2D>().isTrigger = false;
