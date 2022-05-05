@@ -7,10 +7,9 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
-    private Vector3 position;
-    private bool positionChanged = false;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
+    private Vector3 position;
 
     private Rigidbody2D body;
     private BoxCollider2D BoxCollider;
@@ -18,8 +17,6 @@ public class Movement : MonoBehaviour
 
     internal void moveToNexDoor(Transform nextDoor)
     {
-        Debug.Log("key pressed CCC");
-        positionChanged = true;
         transform.position = nextDoor.position;
     }
 
@@ -33,12 +30,6 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        //if(positionChanged)
-        //{
-         //   transform.position = position;
-          //  positionChanged = false;
-        //}
-
 
         horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
