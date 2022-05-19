@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Person : MonoBehaviour
 {
     public GameObject person;
     public GameObject person2;
     public Transform startPosition;
-    public Text txt;
+    public TMP_Text txt;
 
     public static int point = 0;
 
@@ -43,7 +44,7 @@ public class Person : MonoBehaviour
                 point -= 1;
             }
             Destroy(collision.gameObject);
-            txt.text = point.ToString();
+            txt.SetText(point.ToString());
         }
         Debug.Log(point);
     }
