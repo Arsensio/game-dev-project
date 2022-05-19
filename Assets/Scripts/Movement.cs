@@ -63,4 +63,5 @@ public class Movement : MonoBehaviour
 
         return raycastHit2D.collider != null;
     }
+
 }

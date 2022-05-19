@@ -14,6 +14,10 @@ public class Background : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            transform.position += Vector3.right * (transform.position.x - checkPoint.position.x);
+        }
         transform.position += ((Vector3.left * speed) * Time.deltaTime);
     }
 }

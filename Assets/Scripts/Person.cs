@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Person : MonoBehaviour
 {
     public GameObject person;
     public GameObject person2;
     public Transform startPosition;
+    public Text txt;
 
-    public static int point;
-
+    public static int point = 0;
 
     public void Start()
     {
@@ -27,6 +28,24 @@ public class Person : MonoBehaviour
         {
             respawn();
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Point")
+        {
+            if (collision.gameObject.layer == 3)
+            {
+                point += 1;
+            }
+            else
+            {
+                point -= 1;
+            }
+            Destroy(collision.gameObject);
+            txt.text = point.ToString();
+        }
+        Debug.Log(point);
     }
 
     void respawn()
