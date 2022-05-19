@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EndLevel : MonoBehaviour
 {
     public GameObject endLevelUI;
+    public Button nextLevel;
     public TMP_Text button_txt;
     public TMP_Text txt;
 
@@ -30,12 +33,24 @@ public class EndLevel : MonoBehaviour
             if (Person.point > 20)
             {
                 button_txt.SetText("Next Level");
+                nextLevel.onClick.AddListener(nextOnClick);
             }  else 
             {
                 button_txt.SetText("Restart");
+                nextLevel.onClick.AddListener(restartOnClick);
             }
             txt.SetText("Score: " + Person.point.ToString());
             endLevelUI.SetActive(true);
         }
+    }
+
+    void nextOnClick()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    void restartOnClick()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

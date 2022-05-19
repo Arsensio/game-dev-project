@@ -3293,7 +3293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minusPrefab: {fileID: 1600118694}
-  respawnTime: 1.7
+  respawnTime: 1
 --- !u!1 &559219272
 GameObject:
   m_ObjectHideFlags: 0
@@ -11773,6 +11773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endLevelUI: {fileID: 2025683567}
+  nextLevel: {fileID: 0}
   button_txt: {fileID: 822005501}
   txt: {fileID: 221297136}
 --- !u!1 &1918206513

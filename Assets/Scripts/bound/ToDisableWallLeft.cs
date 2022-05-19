@@ -17,7 +17,8 @@ public class ToDisableWallLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        float horizontalInput = Input.GetAxis("Horizontal");
+        if (horizontalInput > 0.1f)
         {
             triggerObject.GetComponent<BoxCollider2D>().isTrigger = true;
         }
