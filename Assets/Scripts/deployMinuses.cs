@@ -27,12 +27,18 @@ public class deployMinuses : MonoBehaviour
     private void spawnPlusses()
     {
         GameObject a = Instantiate(minusPrefab) as GameObject;
-        a.transform.position = new Vector2(Xmax * 2, Random.Range(Ymin + 0.5f, Ymax + 4.5f));
+        a.transform.position = new Vector2(Xmax * 2, Random.Range(Ymin + 0.7f, -1f));
+
+        GameObject b = Instantiate(minusPrefab) as GameObject;
+        b.transform.position = new Vector2(Xmax * 2, Random.Range(0.8f, 4.2f));
+
+        GameObject c = Instantiate(minusPrefab) as GameObject;
+        c.transform.position = new Vector2(Xmax * 2, Random.Range(5.8f, 8.5f));
     }
 
     IEnumerator minusses()
     {
-        while(true)
+        while (true)
         {
             yield return new WaitForSeconds(respawnTime);
             spawnPlusses();
@@ -42,6 +48,6 @@ public class deployMinuses : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

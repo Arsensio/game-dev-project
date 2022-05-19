@@ -35,6 +35,9 @@ TextureImporter:
   - first:
       213: -7170068993438571980
     second: plus_1
+  - first:
+      213: -4005343012342245960
+    second: stone_wall
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -342,7 +345,7 @@ TextureImporter:
         width: 178
         height: 165
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -363,7 +366,7 @@ TextureImporter:
         width: 186
         height: 151
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -371,6 +374,27 @@ TextureImporter:
       bones: []
       spriteID: 4322d073d3cce7c90800000000000000
       internalID: -7170068993438571980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_wall
+      rect:
+        serializedVersion: 2
+        x: 4511
+        y: 423
+        width: 97
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b55fb160c92a68c0800000000000000
+      internalID: -4005343012342245960
       vertices: []
       indices: 
       edges: []

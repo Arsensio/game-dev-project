@@ -15,6 +15,7 @@ public class Person : MonoBehaviour
 
     public void Start()
     {
+        point = 0;
         person2.SetActive(false);
     }
 

@@ -10,6 +10,11 @@ public class MainMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     // Update is called once per frame
 
+    void Start() 
+    {
+        pauseMenuUI.SetActive(false);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -39,8 +44,14 @@ public class MainMenu : MonoBehaviour
         GameIsPaused = false ;
     }
 
+    public void ToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+        
+    }
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level1");
     }
 }
