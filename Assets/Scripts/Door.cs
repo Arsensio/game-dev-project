@@ -11,10 +11,8 @@ public class Door : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("key enter");
             if (Input.GetKeyDown(KeyCode.R))
             {
-                Debug.Log("key pressed");
                 controller.moveToNexDoor(nextDoor);
             }
         }

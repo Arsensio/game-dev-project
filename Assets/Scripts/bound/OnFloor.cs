@@ -19,7 +19,6 @@ public class OnFloor : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            Debug.Log("update");
             floor.GetComponent<BoxCollider2D>().isTrigger = true;
         }   
     }
@@ -28,7 +27,6 @@ public class OnFloor : MonoBehaviour
     {
         if (col.tag == "Player" && collider.bounds.Contains(col.bounds.min))
         {
-            Debug.Log("col");
             floor.GetComponent<BoxCollider2D>().isTrigger = false;
         }
     }

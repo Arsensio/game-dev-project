@@ -8,6 +8,9 @@ public class Person : MonoBehaviour
     public GameObject person2;
     public Transform startPosition;
 
+    public static int point;
+
+
     public void Start()
     {
         person2.SetActive(false);
