@@ -29,7 +29,7 @@ public class deployPlusses : MonoBehaviour
     private void spawnPlusses()
     {
         GameObject a = Instantiate(plusPrefab) as GameObject;
-        a.transform.position = new Vector2(Xmax * 2, Random.Range(Ymin + 0.5f, -1));
+        a.transform.position = new Vector2(Xmax * 2, Random.Range(Ymin + 0.5f, Ymax + 4.5f));
         // print(Ymin + "; " + Ymax);
     }
 

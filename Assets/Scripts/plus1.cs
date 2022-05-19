@@ -23,10 +23,10 @@ public class plus1 : MonoBehaviour
     void Update()
     {
          
-        if(transform.position.x < Xmin * 2)
+        /*if(transform.position.x < Xmin * 2)
         {
             Destroy(this.gameObject);
-        }
+        }*/
          
     }
 }

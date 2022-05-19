@@ -20,9 +20,9 @@ public class minus1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < Xmin * 2)
+        /*if (transform.position.x < Xmin * 2)
         {
             Destroy(this.gameObject);
-        }
+        }*/
     }
 }
