@@ -14,7 +14,8 @@ public class Stairs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.UpArrow))
+        float verticalInput = Input.GetAxis("Vertical");
+        if (verticalInput > 0.1f)
         {
             m_ObjectCollider.isTrigger = false;
         } else

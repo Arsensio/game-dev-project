@@ -17,7 +17,8 @@ public class OnFloor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.DownArrow))
+        float verticalInput = Input.GetAxis("Vertical");
+        if (verticalInput < -0.1f)
         {
             floor.GetComponent<BoxCollider2D>().isTrigger = true;
         }   

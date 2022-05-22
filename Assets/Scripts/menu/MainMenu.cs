@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Video;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    // Update is called once per frame
+    public VideoPlayer videoPlayer;
+    public TMP_Text video_playPause_text;
 
     void Start() 
     {
@@ -44,14 +47,19 @@ public class MainMenu : MonoBehaviour
         GameIsPaused = false ;
     }
 
-    public void ToMenu()
+    public void ToScene(string scene)
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(scene);
     }
 
-    public void PlayGame()
+    public void LoadSceneAsync(string scene)
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+    }
+
+    public void UnloadSceneAsync(string scene)
+    {
+        SceneManager.UnloadSceneAsync(scene);
     }
 
     public void QuitGame()
@@ -59,8 +67,23 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void ToSettings()
+    public void PlayPause()
     {
-        SceneManager.LoadScene("Settings");
+        if (videoPlayer.isPlaying)
+        {
+            videoPlayer.Pause();
+            video_playPause_text.SetText("Pause");
+        }
+        else
+        {
+            videoPlayer.Play();
+            video_playPause_text.SetText("Play");
+        }
     }
+
+    public void toggleGameObject(GameObject gameObject)
+    {
+        gameObject.SetActive(!gameObject.activeSelf);
+    }
+
 }
