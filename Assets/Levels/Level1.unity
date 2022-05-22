@@ -5065,7 +5065,7 @@ GameObject:
   - component: {fileID: 812719952}
   - component: {fileID: 812719951}
   m_Layer: 5
-  m_Name: Resume Button
+  m_Name: Level Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11773,7 +11773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endLevelUI: {fileID: 2025683567}
-  nextLevel: {fileID: 0}
+  nextLevel: {fileID: 812719955}
   button_txt: {fileID: 822005501}
   txt: {fileID: 221297136}
 --- !u!1 &1918206513

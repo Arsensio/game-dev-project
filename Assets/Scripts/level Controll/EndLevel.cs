@@ -23,14 +23,15 @@ public class EndLevel : MonoBehaviour
         {
             
             Time.timeScale = 0f;
+            int index = SceneManager.GetActiveScene().buildIndex;
             //if (Person.point > 90)
             //{
             //    button_txt.SetText("Next Level");
-           // } else if (Person.point > 70)
-           // {
+            // } else if (Person.point > 70)
+            // {
             //    button_txt.SetText("Next Level");
             //} else
-            if (Person.point > 20)
+            if (Person.point > 20 - index * 2)
             {
                 button_txt.SetText("Next Level");
                 nextLevel.onClick.AddListener(nextOnClick);
